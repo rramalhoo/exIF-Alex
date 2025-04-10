@@ -27,3 +27,24 @@ function IMC() {
 
 
 }
+
+function media() {
+    let nota1 = parseFloat(document.getElementById("prv1").value)
+    let nota2 = parseFloat(document.getElementById("prv2").value)
+    let media = (nota1 + nota2) / 2
+    let msg = ''
+
+    if (media >= 7) {
+        msg = '<strong>Aprovado</strong>, com nota: '
+    }
+    if (media <= 5 && media >= 6.9) {
+        msg = '<strong>Recuperação</strong>, com nota: '
+    }
+    if (media < 5) {
+        msg = '<strong>Retido</strong>, com nota: '
+    }
+
+    document.getElementById("resposta2").innerHTML = msg + '' + media
+
+
+}
